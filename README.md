@@ -32,3 +32,17 @@ This library contains two different classes.
    * press_until_square(): This function returns the integer value of the number that has been pressed until square button on keypad.
    * calculate(): This function initializes a calculator and wants two input number from the user. Then it does the operation according to the given values.
                   In my keypad, A is summation, B is subtraction, C is multiplication, D is division operation.
+
+# Example Code
+
+      from keypad_class import Keypad,Calculator
+
+      my_keypad = Keypad(4, 4, [0,1,2,3,4,5,6,7], [['1','2',"3",'A'],['4','5','6','B'],['7','8','9','C'], ['*','0',"#","D"]])
+
+      calc = Calculator(4, 4, [0,1,2,3,4,5,6,7], [['1','2',"3",'A'], ['4','5','6','B'], ['7','8','9','C'], ['*','0',"#","D"]])
+
+      while True:  
+         calc.calculate()
+         my_keypad.print_key_pressed()
+         break
+
